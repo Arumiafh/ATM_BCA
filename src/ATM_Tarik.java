@@ -26,27 +26,24 @@ public class ATM_Tarik extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         tunai = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATM MALANG");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 30, 400, 30);
-
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Penarikan"));
         jPanel1.setLayout(null);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Masukkan Jumlah Penyetoran :");
+        jLabel2.setText("Masukkan Jumlah Penarikan :");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 40, 300, 30);
 
@@ -64,7 +61,7 @@ public class ATM_Tarik extends javax.swing.JFrame {
         jButton1.setBounds(110, 120, 120, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(30, 90, 340, 180);
+        jPanel1.setBounds(30, 190, 340, 180);
 
         jButton3.setText("Transaksi Lain");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +70,7 @@ public class ATM_Tarik extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(50, 290, 120, 30);
+        jButton3.setBounds(50, 390, 120, 30);
 
         jButton2.setText("Keluar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -82,9 +79,19 @@ public class ATM_Tarik extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 290, 120, 30);
+        jButton2.setBounds(220, 390, 120, 30);
 
-        setBounds(0, 0, 419, 403);
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, -100, 400, 260);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 400, 450);
+
+        setBounds(0, 0, 418, 486);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -92,17 +99,19 @@ public class ATM_Tarik extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new ATM_Malang().setVisible(true);
+        ATM_Malang a = new ATM_Malang();
+        a.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int bil1 = 50000;
         int bil2 = Integer.parseInt(tunai.getText());
         int kurang = bil1-bil2;
-        if(bil2>200000) {
-            javax.swing.JOptionPane.showMessageDialog(null,"Maaf ! \n"+"Saldo Anda tidak mencukupi untuk melakukan penarikan.\n"+"Saldo Anda Rp 200.000.");
+        if(bil2>50000) {
+            javax.swing.JOptionPane.showMessageDialog(null,"Maaf ! \n"+"Saldo Anda tidak mencukupi untuk melakukan penarikan.\n"+"Saldo Anda Rp 50.000.");
         }else{
-         javax.swing.JOptionPane.showMessageDialog(null,"Saldo Anda tinggal = Rp "+kurang);   
+         javax.swing.JOptionPane.showMessageDialog(null,"Penarikan Berhasil ! \n Sisa Saldo Anda = Rp "+kurang);   
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -148,6 +157,7 @@ public class ATM_Tarik extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField tunai;
     // End of variables declaration//GEN-END:variables
 }

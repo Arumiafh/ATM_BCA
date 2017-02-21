@@ -26,39 +26,36 @@ public class ATM_Petunjuk extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATM MALANG");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 30, 400, 30);
-
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Petunjuk"));
         jPanel1.setLayout(null);
 
         jLabel2.setText("3. Gunakan uang sesuai kebutuhan dan rajinlah menabung");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 90, 310, 30);
+        jLabel2.setBounds(20, 90, 360, 30);
 
-        jLabel3.setText("1. Masukkan PIN dengan benar");
+        jLabel3.setText("1. Masukkan PIN Anda dengan benar");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(20, 30, 310, 30);
+        jLabel3.setBounds(20, 30, 360, 30);
 
-        jLabel4.setText("2. Bertransaksilah dengan benar sesuai piliahn dan ketentuan");
+        jLabel4.setText("2. Bertransaksilah dengan benar sesuai pilihan dan ketentuan");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(20, 60, 310, 30);
+        jLabel4.setBounds(20, 60, 360, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(30, 90, 340, 140);
+        jPanel1.setBounds(30, 180, 390, 140);
 
         jButton3.setText("Transaksi Lain");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +64,7 @@ public class ATM_Petunjuk extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(50, 250, 120, 30);
+        jButton3.setBounds(50, 340, 120, 30);
 
         jButton2.setText("Keluar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -76,9 +73,19 @@ public class ATM_Petunjuk extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 250, 120, 30);
+        jButton2.setBounds(220, 340, 120, 30);
 
-        setBounds(0, 0, 416, 356);
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, -100, 450, 260);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 450, 400);
+
+        setBounds(0, 0, 462, 433);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -134,5 +141,6 @@ public class ATM_Petunjuk extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

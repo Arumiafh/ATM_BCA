@@ -26,22 +26,19 @@ public class ATM_Malang extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATM MALANG");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 30, 400, 30);
-
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Pilih Transaksi"));
         jPanel1.setLayout(null);
 
@@ -91,9 +88,17 @@ public class ATM_Malang extends javax.swing.JFrame {
         jButton5.setBounds(30, 170, 130, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(30, 90, 340, 240);
+        jPanel1.setBounds(30, 190, 340, 240);
 
-        setBounds(0, 0, 420, 407);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(70, -100, 260, 260);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 410, 460);
+
+        setBounds(0, 0, 420, 496);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -167,7 +172,8 @@ public class ATM_Malang extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

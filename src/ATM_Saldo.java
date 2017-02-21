@@ -10,7 +10,7 @@
  */
 public class ATM_Saldo extends javax.swing.JFrame {
 
-    int choice,z,tab, saldo=50000;
+    int choice,z,tab=50000;
     
     public ATM_Saldo() {
         initComponents();
@@ -33,17 +33,20 @@ public class ATM_Saldo extends javax.swing.JFrame {
         buttonSaldo = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
 
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATM MALANG");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 30, 400, 30);
+        jLabel1.setBounds(0, -100, 400, 260);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Informasi Saldo"));
         jPanel1.setLayout(null);
 
@@ -51,6 +54,7 @@ public class ATM_Saldo extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(20, 50, 120, 30);
 
+        Saldo.setEditable(false);
         Saldo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Saldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +74,7 @@ public class ATM_Saldo extends javax.swing.JFrame {
         buttonSaldo.setBounds(120, 110, 110, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(30, 90, 340, 170);
+        jPanel1.setBounds(30, 190, 340, 170);
 
         jButton1.setText("Keluar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +83,7 @@ public class ATM_Saldo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(230, 290, 110, 30);
+        jButton1.setBounds(230, 390, 110, 30);
 
         jButton3.setText("Transaksi Lain");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -88,9 +92,13 @@ public class ATM_Saldo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(60, 290, 110, 30);
+        jButton3.setBounds(60, 390, 110, 30);
 
-        setBounds(0, 0, 416, 386);
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 400, 450);
+
+        setBounds(0, 0, 416, 486);
     }// </editor-fold>//GEN-END:initComponents
 
     private void SaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaldoActionPerformed
@@ -102,12 +110,14 @@ public class ATM_Saldo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void buttonSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaldoActionPerformed
-      int tab = Integer.parseInt(Saldo.getText().toString());
-      
+
+      Saldo.setText(""+tab);
     }//GEN-LAST:event_buttonSaldoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        ATM_Malang a = new ATM_Malang();
+        a.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -154,5 +164,6 @@ public class ATM_Saldo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class ATM_Masuk extends javax.swing.JFrame {
 
-    private String pin;
+     String pin = "";
 
     /**
      * Creates new form ATM_Masuk
@@ -31,14 +31,11 @@ public class ATM_Masuk extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -47,30 +44,22 @@ public class ATM_Masuk extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
         tvPin = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("SELAMAT DATANG");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 20, 370, 30);
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("di");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 50, 370, 14);
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATM MALANG");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 60, 370, 30);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(50, -100, 260, 260);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Masukkan 4 Digit Pin Anda");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 110, 370, 40);
+        jLabel2.setBounds(0, 170, 370, 40);
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -79,8 +68,9 @@ public class ATM_Masuk extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(150, 380, 60, 30);
+        jButton1.setBounds(190, 440, 80, 30);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jButton2.setText("0");
@@ -92,23 +82,14 @@ public class ATM_Masuk extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(170, 120, 50, 30);
 
-        jButton3.setText("1");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(30, 20, 50, 30);
-
-        jButton4.setText("2");
+        jButton4.setText("1");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(100, 20, 50, 30);
+        jButton4.setBounds(30, 20, 50, 30);
 
         jButton5.setText("3");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -173,17 +154,45 @@ public class ATM_Masuk extends javax.swing.JFrame {
         jPanel1.add(jButton11);
         jButton11.setBounds(100, 120, 50, 30);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(20, 200, 320, 170);
-        getContentPane().add(tvPin);
-        tvPin.setBounds(120, 150, 120, 30);
+        jButton12.setText("2");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton12);
+        jButton12.setBounds(100, 20, 50, 30);
 
-        setBounds(0, 0, 385, 477);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(20, 260, 320, 170);
+
+        tvPin.setEditable(false);
+        tvPin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tvPinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(tvPin);
+        tvPin.setBounds(120, 210, 120, 30);
+
+        jButton3.setText("Delete");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(90, 440, 80, 30);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(0, 0, 360, 500);
+
+        setBounds(0, 0, 374, 536);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(tvPin.getText().trim().equals("1234")) {
-          javax.swing.JOptionPane.showMessageDialog(null,"Saldo Anda sebesar Rp 50.000");
+        if(tvPin.getText().equals("1234")) {
           new ATM_Malang().setVisible(true);
         }else{
             javax.swing.JOptionPane.showMessageDialog(null, "Maaf PIN yang anda masukan salah, Coba Lagi");
@@ -191,14 +200,8 @@ public class ATM_Masuk extends javax.swing.JFrame {
            this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-        pin += "1";
-        tvPin.setText(pin);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      pin += "2";
+      pin += "1";
       tvPin.setText(pin);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -242,6 +245,20 @@ public class ATM_Masuk extends javax.swing.JFrame {
       tvPin.setText(pin);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        pin += "2";
+      tvPin.setText(pin);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void tvPinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tvPinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tvPinActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        tvPin.setText("");
+        pin = "";
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -281,6 +298,7 @@ public class ATM_Masuk extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -289,11 +307,10 @@ public class ATM_Masuk extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField tvPin;
     // End of variables declaration//GEN-END:variables
 }

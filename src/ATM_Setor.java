@@ -29,22 +29,24 @@ public class ATM_Setor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        hasilsetor = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATM MALANG");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 30, 400, 30);
-
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Penyetoran"));
         jPanel1.setLayout(null);
 
@@ -53,9 +55,9 @@ public class ATM_Setor extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 40, 300, 30);
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(90, 70, 160, 30);
+        hasilsetor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(hasilsetor);
+        hasilsetor.setBounds(90, 70, 160, 30);
 
         jButton1.setText("Setor");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +69,7 @@ public class ATM_Setor extends javax.swing.JFrame {
         jButton1.setBounds(110, 120, 120, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(30, 90, 340, 180);
+        jPanel1.setBounds(30, 190, 340, 180);
 
         jButton3.setText("Transaksi Lain");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +78,7 @@ public class ATM_Setor extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(60, 300, 120, 30);
+        jButton3.setBounds(60, 400, 120, 30);
 
         jButton2.setText("Keluar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -85,9 +87,19 @@ public class ATM_Setor extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 300, 120, 30);
+        jButton2.setBounds(220, 400, 120, 30);
 
-        setBounds(0, 0, 416, 405);
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm/bca.png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, -100, 400, 260);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 400, 460);
+
+        setBounds(0, 0, 416, 494);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -95,11 +107,16 @@ public class ATM_Setor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new ATM_Malang().setVisible(true);
+       ATM_Malang a = new ATM_Malang();
+        a.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        int bil1 = 50000;
+        int bil2 = Integer.parseInt(hasilsetor.getText());
+        int tambah = bil1+bil2;
+        javax.swing.JOptionPane.showMessageDialog(null,"Penyetoran Berhasil ! \n Saldo Anda Sekarang = Rp "+tambah);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -138,12 +155,14 @@ public class ATM_Setor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField hasilsetor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
